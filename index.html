@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>꿈돌이의 골목탐험 | 대전 로컬 큐레이션 디렉터 서은지</title>
+  <meta name="description" content="대전까지 와서, 빵만 사고 그냥 가실 건가요? 우주 요정 꿈돌이가 안내하는 대전 로컬 상점 퀘스트 큐레이션 솔루션" />
+  <meta property="og:title" content="꿈돌이의 골목탐험 | 대전 로컬 큐레이션 디렉터 서은지" />
+  <meta property="og:description" content="대전까지 와서, 빵만 사고 그냥 가실 건가요? 우주 요정 꿈돌이가 안내하는 대전 로컬 상점 퀘스트 큐레이션 솔루션" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FDE047',
+              amber: '#F59E0B',
+              warm: '#FEFCE8',
+              dark: '#1E1B4B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Pretendard Variable Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    body {
+      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      background-color: #FEFCE8;
+      color: #1E1B4B;
+    }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+
+    @keyframes bounce-gentle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .animate-float-slow {
+      animation: float-slow 4s ease-in-out infinite;
+    }
+
+    .animate-bounce-gentle {
+      animation: bounce-gentle 2.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#FEFCE8] text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-950">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-40 bg-[#FFFBEB]/95 backdrop-blur-md border-b border-amber-200 shadow-2xs">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+      <!-- Brand Zone -->
+      <a href="#" class="flex items-center gap-3 group whitespace-nowrap shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-amber-300 border-2 border-amber-400 flex items-center justify-center shadow-xs overflow-hidden group-hover:scale-105 transition-transform">
+          <!-- Vector Kkumdori Icon -->
+          <svg viewBox="0 0 100 100" class="w-8 h-8" fill="none">
+            <path d="M 50 25 Q 44 10 38 8" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" />
+            <polygon points="38,2 40,7 45,8 41,11 42,16 38,13 33,16 34,11 31,8 36,7" fill="#38BDF8" />
+            <circle cx="23" cy="55" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+            <circle cx="77" cy="55" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+            <circle cx="50" cy="55" r="26" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+            <ellipse cx="35" cy="60" rx="5" ry="3" fill="#FB7185" opacity="0.8" />
+            <ellipse cx="65" cy="60" rx="5" ry="3" fill="#FB7185" opacity="0.8" />
+            <rect x="42" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+            <rect x="54" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+            <circle cx="43.5" cy="50" r="1.2" fill="#FFFFFF" />
+            <circle cx="55.5" cy="50" r="1.2" fill="#FFFFFF" />
+            <path d="M 48 62 Q 50 65 52 62" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-black text-xl tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
+            꿈돌이의 골목탐험
+          </span>
+          <span class="text-[10px] font-bold text-amber-700 tracking-wider">
+            LOCAL CURATOR · 서은지
+          </span>
+        </div>
+      </a>
+
+      <!-- Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-slate-700">
+        <a href="#캐릭터-소개" class="hover:text-amber-600 transition-colors whitespace-nowrap">꿈씨 캐릭터</a>
+        <a href="#문제-정의" class="hover:text-amber-600 transition-colors whitespace-nowrap">문제 정의</a>
+        <a href="#솔루션-제시" class="hover:text-amber-600 transition-colors whitespace-nowrap">꿈돌이 솔루션</a>
+        <a href="#시범-퀘스트-MAP" class="hover:text-amber-600 transition-colors whitespace-nowrap">별빛 퀘스트 MAP</a>
+        <a href="#핵심-기능혜택" class="hover:text-amber-600 transition-colors whitespace-nowrap">핵심 혜택</a>
+        <a href="#신뢰-구축" class="hover:text-amber-600 transition-colors whitespace-nowrap">신뢰 & 사례</a>
+        <a href="#가격-및-조건" class="hover:text-amber-600 transition-colors whitespace-nowrap">특별 혜택</a>
+      </nav>
+
+      <!-- Primary Action Button -->
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="openApplyModal()" class="bg-amber-400 hover:bg-amber-500 text-slate-900 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-black border-2 border-amber-500 shadow-md shadow-amber-400/25 transition transform hover:-translate-y-0.5 whitespace-nowrap shrink-0 cursor-pointer flex items-center gap-1.5">
+          <span>⭐ 시범 퀘스트 무료 신청</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-[#FEF08A] via-[#FFFBEB] to-[#FEFCE8]">
+    <div class="absolute top-10 left-10 text-2xl animate-float-slow select-none opacity-80">⭐</div>
+    <div class="absolute top-24 right-12 text-3xl animate-float-slow select-none opacity-80" style="animation-delay: 1.2s;">✨</div>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <!-- Mascot Lineup -->
+      <div class="inline-flex flex-col items-center mb-5">
+        <div class="relative flex items-center justify-center gap-3">
+          <!-- Cute Waving Kkumdori SVG -->
+          <div class="animate-bounce-gentle">
+            <svg viewBox="0 0 100 120" class="w-24 h-28 drop-shadow-md" fill="none">
+              <path d="M 50 30 Q 44 12 38 10" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+              <polygon points="38,2 41,8 47,9 43,13 44,19 38,16 33,19 34,13 30,9 36,8" fill="#38BDF8" stroke="#0284C7" stroke-width="1" />
+              <!-- Arm Waving -->
+              <path d="M 30 70 C 18 64 14 50 18 44 C 22 40 28 46 26 52 C 24 58 28 64 32 70" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+              <path d="M 70 70 C 78 74 82 82 80 88 C 76 90 72 88 70 82" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+              <!-- Feet & Body -->
+              <ellipse cx="40" cy="105" rx="7" ry="4" fill="#F59E0B" stroke="#D97706" stroke-width="1.5" />
+              <ellipse cx="60" cy="105" rx="7" ry="4" fill="#F59E0B" stroke="#D97706" stroke-width="1.5" />
+              <path d="M 35 75 C 32 90 38 104 50 104 C 62 104 68 90 65 75 Z" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+              <!-- Ears -->
+              <circle cx="24" cy="58" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+              <circle cx="76" cy="58" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+              <!-- Round Head -->
+              <circle cx="50" cy="58" r="26" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+              <!-- Blushing cheeks -->
+              <ellipse cx="36" cy="63" rx="5.5" ry="3.5" fill="#FB7185" opacity="0.8" />
+              <ellipse cx="64" cy="63" rx="5.5" ry="3.5" fill="#FB7185" opacity="0.8" />
+              <!-- Capsule Eyes -->
+              <rect x="42" y="50" width="5" height="11" rx="2.5" fill="#1E1B4B" />
+              <rect x="53" y="50" width="5" height="11" rx="2.5" fill="#1E1B4B" />
+              <circle cx="43.5" cy="52" r="1.3" fill="#FFFFFF" />
+              <circle cx="54.5" cy="52" r="1.3" fill="#FFFFFF" />
+              <!-- Smile -->
+              <path d="M 48 65 Q 50 68 52 65" stroke="#9A3412" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <!-- Cute Kkumsuni SVG -->
+          <div class="animate-bounce-gentle" style="animation-delay: 0.4s;">
+            <svg viewBox="0 0 100 120" class="w-22 h-26 drop-shadow-md" fill="none">
+              <path d="M 50 30 Q 46 14 42 10" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+              <polygon points="42,3 45,9 51,10 47,14 48,20 42,17 37,20 38,14 34,10 40,9" fill="#FACC15" stroke="#CA8A04" stroke-width="1" />
+              <!-- Blue Ribbon -->
+              <g transform="translate(24, 34)">
+                <ellipse cx="4" cy="4" rx="5" ry="3.5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1" />
+                <ellipse cx="12" cy="4" rx="5" ry="3.5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1" />
+                <circle cx="8" cy="4" r="2.5" fill="#60A5FA" />
+              </g>
+              <ellipse cx="40" cy="105" rx="7" ry="4" fill="#F43F5E" stroke="#BE123C" stroke-width="1.5" />
+              <ellipse cx="60" cy="105" rx="7" ry="4" fill="#F43F5E" stroke="#BE123C" stroke-width="1.5" />
+              <path d="M 35 75 C 32 90 38 104 50 104 C 62 104 68 90 65 75 Z" fill="#F9A8D4" stroke="#DB2777" stroke-width="2" />
+              <circle cx="24" cy="58" r="5" fill="#F472B6" stroke="#DB2777" stroke-width="1.5" />
+              <circle cx="76" cy="58" r="5" fill="#F472B6" stroke="#DB2777" stroke-width="1.5" />
+              <circle cx="50" cy="58" r="26" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+              <ellipse cx="36" cy="63" rx="5.5" ry="3.5" fill="#F43F5E" opacity="0.8" />
+              <ellipse cx="64" cy="63" rx="5.5" ry="3.5" fill="#F43F5E" opacity="0.8" />
+              <rect x="42" y="50" width="5" height="11" rx="2.5" fill="#1E1B4B" />
+              <rect x="53" y="50" width="5" height="11" rx="2.5" fill="#1E1B4B" />
+              <circle cx="43.5" cy="52" r="1.3" fill="#FFFFFF" />
+              <circle cx="54.5" cy="52" r="1.3" fill="#FFFFFF" />
+              <path d="M 48 65 Q 50 68 52 65" stroke="#9F1239" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <!-- Speech Bubble -->
+          <div class="absolute -top-3 -right-6 sm:-right-16 bg-white text-slate-900 text-xs font-black px-3.5 py-1.5 rounded-2xl border-2 border-amber-400 shadow-sm whitespace-nowrap transform rotate-3">
+            꿈씨 패밀리가 안내해요! 🚀
+          </div>
+        </div>
+      </div>
+
+      <!-- Domain Badge -->
+      <div class="inline-flex items-center gap-2 bg-amber-300 text-amber-950 px-4 py-1.5 rounded-full text-xs sm:text-sm font-black mb-5 border border-amber-400 shadow-2xs">
+        <span>✨ OSINT & AI 기반 대전 골목 상권 유진입 솔루션</span>
+      </div>
+
+      <!-- Hero Headline -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 leading-[1.2] tracking-tight mb-6">
+        대전까지 와서,<br />
+        <span class="text-amber-500 underline decoration-amber-400 decoration-wavy decoration-3">
+          빵만 사고 그냥 가실 건가요?
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg md:text-xl text-slate-700 max-w-3xl mx-auto mb-10 leading-relaxed font-semibold">
+        유명 핫플 대기시간 1시간 동안, 도보 10분 거리의 숨은 골목 상점으로 여행객을 연결합니다.<br class="hidden sm:inline" />
+        체류 시간은 늘리고 골목 상권 매출을 극대화하세요.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <button onclick="openApplyModal()" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-500 text-slate-900 px-8 py-4 rounded-2xl text-base font-black border-2 border-amber-500 shadow-lg shadow-amber-400/35 transition transform hover:-translate-y-1 flex items-center justify-center gap-2 cursor-pointer">
+          <span>⭐ 무료 시범 퀘스트 MAP 신청하기</span>
+        </button>
+        <a href="#시범-퀘스트-MAP" class="w-full sm:w-auto bg-white hover:bg-amber-50 text-slate-800 border-2 border-amber-300 px-7 py-4 rounded-2xl text-base font-bold transition shadow-xs flex items-center justify-center gap-2">
+          <span>🧭 별빛 퀘스트 동선 미리보기</span>
+        </a>
+      </div>
+
+      <!-- 3 Stats Bubbles -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto text-left">
+        <div class="bg-white/95 p-5 rounded-3xl border-2 border-amber-200 shadow-sm flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-black text-2xl shrink-0">
+            ⏱️
+          </div>
+          <div>
+            <div class="text-xs text-amber-800 font-bold">대기시간 순삭 퀘스트</div>
+            <div class="text-base font-black text-slate-900">웨이팅 1시간 완벽 활용</div>
+          </div>
+        </div>
+
+        <div class="bg-white/95 p-5 rounded-3xl border-2 border-amber-200 shadow-sm flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center font-black text-2xl shrink-0">
+            🧭
+          </div>
+          <div>
+            <div class="text-xs text-sky-800 font-bold">도보 5~10분 골목 발굴</div>
+            <div class="text-base font-black text-slate-900">독립서점·공방·이색맛집</div>
+          </div>
+        </div>
+
+        <div class="bg-white/95 p-5 rounded-3xl border-2 border-amber-200 shadow-sm flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-black text-2xl shrink-0">
+            🎁
+          </div>
+          <div>
+            <div class="text-xs text-emerald-800 font-bold">초기 파일럿 파트너</div>
+            <div class="text-base font-black text-emerald-700">선착순 3곳 100% 무료</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CHARACTER SECTION -->
+  <section id="캐릭터-소개" class="py-20 bg-gradient-to-b from-[#FEFCE8] via-[#FFFBEB] to-white border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-black text-amber-900 bg-amber-200 px-4 py-1.5 rounded-full inline-block mb-3 border border-amber-300">
+          ⭐ 대전 공식 꿈씨 패밀리 군단
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          골목을 밝히는 <span class="text-amber-500 underline decoration-amber-400 decoration-wavy">꿈씨 패밀리 캐릭터</span>
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed font-medium">
+          꿈돌이와 꿈순이, 그리고 든든한 우주 친구들이 대전 골목 상점의 큐레이션 원정대로 출동합니다!
+        </p>
+      </div>
+
+      <!-- Character Lineup Showcase Card -->
+      <div class="bg-gradient-to-r from-amber-100 via-pink-50 to-sky-100 rounded-3xl p-6 sm:p-8 border-2 border-amber-300 shadow-sm mb-10 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-white/40 blur-2xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+          <div class="text-center lg:text-left">
+            <span class="inline-block bg-white/80 backdrop-blur-xs text-amber-900 text-xs font-black px-3.5 py-1 rounded-full border border-amber-300 mb-2">
+              ✨ 골목 탐험 원정대 총출동
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-2">
+              "웨이팅 대신, 저희와 함께 대전 골목 탐험해요!"
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-bold max-w-md">
+              각 캐릭터를 클릭하여 전담 추천 코스와 특별한 혜택을 확인해보세요.
+            </p>
+          </div>
+
+          <!-- Characters Standing Together Lineup (Consistent Sizing & Proportion) -->
+          <div class="flex items-end justify-center gap-2 sm:gap-4 pt-4">
+            <!-- 1. Doni in Lineup -->
+            <div class="flex flex-col items-center hover:scale-105 transition-transform cursor-pointer w-20 sm:w-24 shrink-0" onclick="switchCharacter('bigblue')">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 flex items-center justify-center">
+                <svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+                  <path d="M 70 34 C 66 18 78 16 74 34" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" fill="none" />
+                  <polygon points="74,10 76,15 81,16 77,20 78,25 74,22 70,25 71,20 67,16 72,15" fill="#C084FC" stroke="#7E22CE" stroke-width="1" />
+                  <path d="M 44 48 C 36 38 28 50 36 60 C 26 78 22 108 28 135 C 32 146 52 148 70 148 C 88 148 108 146 112 135 C 118 108 114 78 104 60 C 112 50 104 38 96 48 C 86 42 54 42 44 48 Z" fill="#BAE6FD" stroke="#0284C7" stroke-width="2.5" />
+                  <ellipse cx="48" cy="145" rx="12" ry="7" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" />
+                  <ellipse cx="92" cy="145" rx="12" ry="7" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" />
+                  <ellipse cx="46" cy="90" rx="8" ry="5" fill="#F472B6" opacity="0.75" />
+                  <ellipse cx="94" cy="90" rx="8" ry="5" fill="#F472B6" opacity="0.75" />
+                  <rect x="59" y="72" width="6.5" height="14" rx="3.25" fill="#0F172A" />
+                  <rect x="74.5" y="72" width="6.5" height="14" rx="3.25" fill="#0F172A" />
+                  <circle cx="61" cy="75" r="1.6" fill="#FFFFFF" />
+                  <circle cx="76.5" cy="75" r="1.6" fill="#FFFFFF" />
+                  <path d="M 66 93 Q 70 97 74 93" stroke="#075985" stroke-width="2.2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="text-[11px] font-black text-sky-800 bg-sky-200/90 px-2 py-0.5 rounded-full mt-2 border border-sky-300 w-full text-center">도니</span>
+            </div>
+
+            <!-- 2. Kkumdori in Lineup (Leader, center) -->
+            <div class="flex flex-col items-center hover:scale-105 transition-transform cursor-pointer w-20 sm:w-24 shrink-0 animate-bounce-gentle" onclick="switchCharacter('kkumdori')">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 flex items-center justify-center">
+                <svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+                  <path d="M 70 42 Q 62 20 54 18" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" />
+                  <polygon points="54,8 57,15 64,16 59,21 61,28 54,24 47,28 49,21 44,16 51,15" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2" />
+                  <path d="M 46 95 C 30 89 24 72 30 64 C 36 58 44 66 42 74 C 40 82 46 89 50 95" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+                  <path d="M 94 97 C 104 101 108 113 104 121 C 100 125 94 121 92 115 C 90 107 88 101 86 97" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+                  <ellipse cx="55" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+                  <ellipse cx="85" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+                  <path d="M 50 104 C 46 122 52 142 70 142 C 88 142 94 122 90 104 Z" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+                  <circle cx="35" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+                  <circle cx="105" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+                  <!-- Head Circle (Consistent r=35) -->
+                  <circle cx="70" cy="80" r="35" fill="#FDE047" stroke="#D97706" stroke-width="2.5" />
+                  <ellipse cx="50" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+                  <ellipse cx="90" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+                  <rect x="59" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+                  <rect x="74.5" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+                  <circle cx="61.5" cy="73" r="1.6" fill="#FFFFFF" />
+                  <circle cx="77" cy="73" r="1.6" fill="#FFFFFF" />
+                  <path d="M 67 91 Q 70 95 73 91" stroke="#9A3412" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="text-[11px] font-black text-amber-950 bg-amber-300 px-2 py-0.5 rounded-full mt-2 border border-amber-400 shadow-2xs w-full text-center">꿈돌이</span>
+            </div>
+
+            <!-- 3. Kkumsuni in Lineup (Matched size to Kkumdori) -->
+            <div class="flex flex-col items-center hover:scale-105 transition-transform cursor-pointer w-20 sm:w-24 shrink-0" onclick="switchCharacter('kkumsuni')">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 flex items-center justify-center">
+                <svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+                  <path d="M 70 42 Q 65 22 58 18" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" />
+                  <polygon points="58,8 61,15 68,16 63,21 65,28 58,24 51,28 53,21 48,16 55,15" fill="#FACC15" stroke="#CA8A04" stroke-width="1.2" />
+                  <g transform="translate(36, 47)">
+                    <ellipse cx="5.5" cy="5.5" rx="6.5" ry="5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1.2" />
+                    <ellipse cx="16.5" cy="5.5" rx="6.5" ry="5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1.2" />
+                    <circle cx="11" cy="5.5" r="3" fill="#60A5FA" />
+                  </g>
+                  <path d="M 46 95 C 30 89 24 72 30 64 C 36 58 44 66 42 74 C 40 82 46 89 50 95" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+                  <path d="M 94 97 C 104 101 108 113 104 121 C 100 125 94 121 92 115 C 90 107 88 101 86 97" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+                  <ellipse cx="55" cy="145" rx="10" ry="5.5" fill="#F43F5E" stroke="#BE123C" stroke-width="1.8" />
+                  <ellipse cx="85" cy="145" rx="10" ry="5.5" fill="#F43F5E" stroke="#BE123C" stroke-width="1.8" />
+                  <path d="M 50 104 C 46 122 52 142 70 142 C 88 142 94 122 90 104 Z" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+                  <circle cx="35" cy="80" r="6.5" fill="#F472B6" stroke="#DB2777" stroke-width="2" />
+                  <circle cx="105" cy="80" r="6.5" fill="#F472B6" stroke="#DB2777" stroke-width="2" />
+                  <!-- Head Circle (Consistent r=35, perfectly aligned with Kkumdori) -->
+                  <circle cx="70" cy="80" r="35" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.5" />
+                  <ellipse cx="50" cy="88" rx="7" ry="4.5" fill="#F43F5E" opacity="0.8" />
+                  <ellipse cx="90" cy="88" rx="7" ry="4.5" fill="#F43F5E" opacity="0.8" />
+                  <rect x="59" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+                  <rect x="74.5" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+                  <circle cx="61.5" cy="73" r="1.6" fill="#FFFFFF" />
+                  <circle cx="77" cy="73" r="1.6" fill="#FFFFFF" />
+                  <path d="M 67 91 Q 70 95 73 91" stroke="#9F1239" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="text-[11px] font-black text-pink-900 bg-pink-200 px-2 py-0.5 rounded-full mt-2 border border-pink-300 w-full text-center">꿈순이</span>
+            </div>
+
+            <!-- 4. Babystar in Lineup (Matched size proportion) -->
+            <div class="flex flex-col items-center hover:scale-105 transition-transform cursor-pointer w-20 sm:w-24 shrink-0" onclick="switchCharacter('babystar')">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 flex items-center justify-center">
+                <svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+                  <line x1="70" y1="46" x2="70" y2="24" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="70" cy="18" r="5" fill="#F59E0B" />
+                  <!-- Star Body matching head/body mass -->
+                  <path d="M 70 45 L 82 72 L 110 74 L 88 94 L 95 122 L 70 107 L 45 122 L 52 94 L 30 74 L 58 72 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2.5" stroke-linejoin="round" />
+                  <ellipse cx="58" cy="138" rx="7" ry="4" fill="#F59E0B" stroke="#CA8A04" stroke-width="1.5" />
+                  <ellipse cx="82" cy="138" rx="7" ry="4" fill="#F59E0B" stroke="#CA8A04" stroke-width="1.5" />
+                  <ellipse cx="52" cy="90" rx="6" ry="3.5" fill="#FB7185" opacity="0.8" />
+                  <ellipse cx="88" cy="90" rx="6" ry="3.5" fill="#FB7185" opacity="0.8" />
+                  <rect x="61" y="78" width="6" height="13" rx="3" fill="#1E1B4B" />
+                  <rect x="73" y="78" width="6" height="13" rx="3" fill="#1E1B4B" />
+                  <circle cx="63" cy="81" r="1.5" fill="#FFFFFF" />
+                  <circle cx="75" cy="81" r="1.5" fill="#FFFFFF" />
+                  <path d="M 67 95 Q 70 98 73 95" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="text-[11px] font-black text-amber-900 bg-amber-200 px-2 py-0.5 rounded-full mt-2 border border-amber-300 w-full text-center">꿈빛이</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Character Buttons with Real Mascot SVG Avatars -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <!-- 1. Kkumdori Tab -->
+        <button onclick="switchCharacter('kkumdori')" id="tab-kkumdori" class="char-tab p-4 rounded-3xl border-2 border-amber-500 bg-amber-100 shadow-md flex flex-col items-center text-center cursor-pointer transition-all">
+          <div class="w-16 h-16 rounded-full bg-white border-2 border-amber-300 flex items-center justify-center mb-2 shadow-inner p-1">
+            <svg viewBox="0 0 100 100" class="w-12 h-12" fill="none">
+              <path d="M 50 25 Q 44 10 38 8" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" />
+              <polygon points="38,2 40,7 45,8 41,11 42,16 38,13 33,16 34,11 31,8 36,7" fill="#38BDF8" />
+              <circle cx="23" cy="55" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+              <circle cx="77" cy="55" r="5" fill="#FBBF24" stroke="#D97706" stroke-width="1.5" />
+              <circle cx="50" cy="55" r="26" fill="#FDE047" stroke="#D97706" stroke-width="2" />
+              <ellipse cx="35" cy="60" rx="5" ry="3" fill="#FB7185" opacity="0.8" />
+              <ellipse cx="65" cy="60" rx="5" ry="3" fill="#FB7185" opacity="0.8" />
+              <rect x="42" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+              <rect x="54" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+              <circle cx="43.5" cy="50" r="1.2" fill="#FFFFFF" />
+              <circle cx="55.5" cy="50" r="1.2" fill="#FFFFFF" />
+              <path d="M 48 62 Q 50 65 52 62" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="text-sm font-black text-slate-900">꿈돌이</div>
+          <div class="text-[11px] font-bold text-slate-500">Kkumdori</div>
+          <span class="mt-2 text-[10px] font-black px-2 py-0.5 rounded-full border bg-amber-200 text-amber-900 border-amber-300">원정대장</span>
+        </button>
+
+        <!-- 2. Kkumsuni Tab -->
+        <button onclick="switchCharacter('kkumsuni')" id="tab-kkumsuni" class="char-tab p-4 rounded-3xl border-2 border-amber-200 bg-white hover:bg-amber-50 flex flex-col items-center text-center cursor-pointer transition-all">
+          <div class="w-16 h-16 rounded-full bg-white border-2 border-pink-300 flex items-center justify-center mb-2 shadow-inner p-1">
+            <svg viewBox="0 0 100 100" class="w-12 h-12" fill="none">
+              <path d="M 50 25 Q 46 12 42 10" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" />
+              <polygon points="42,3 44,8 49,9 45,12 46,17 42,14 38,17 39,12 35,9 40,8" fill="#FACC15" />
+              <g transform="translate(26, 32)">
+                <ellipse cx="4" cy="4" rx="4.5" ry="3.5" fill="#93C5FD" />
+                <ellipse cx="11" cy="4" rx="4.5" ry="3.5" fill="#93C5FD" />
+                <circle cx="7.5" cy="4" r="2" fill="#3B82F6" />
+              </g>
+              <circle cx="23" cy="55" r="5" fill="#F472B6" stroke="#DB2777" stroke-width="1.5" />
+              <circle cx="77" cy="55" r="5" fill="#F472B6" stroke="#DB2777" stroke-width="1.5" />
+              <circle cx="50" cy="55" r="26" fill="#F9A8D4" stroke="#DB2777" stroke-width="2" />
+              <ellipse cx="35" cy="60" rx="5" ry="3" fill="#F43F5E" opacity="0.8" />
+              <ellipse cx="65" cy="60" rx="5" ry="3" fill="#F43F5E" opacity="0.8" />
+              <rect x="42" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+              <rect x="54" y="48" width="4.5" height="10" rx="2.2" fill="#1E1B4B" />
+              <circle cx="43.5" cy="50" r="1.2" fill="#FFFFFF" />
+              <circle cx="55.5" cy="50" r="1.2" fill="#FFFFFF" />
+              <path d="M 48 62 Q 50 65 52 62" stroke="#9F1239" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="text-sm font-black text-slate-900">꿈순이</div>
+          <div class="text-[11px] font-bold text-slate-500">Kkumsuni</div>
+          <span class="mt-2 text-[10px] font-black px-2 py-0.5 rounded-full border bg-pink-100 text-pink-900 border-pink-300">감성기획</span>
+        </button>
+
+        <!-- 3. Big Blue (Doni) Tab -->
+        <button onclick="switchCharacter('bigblue')" id="tab-bigblue" class="char-tab p-4 rounded-3xl border-2 border-amber-200 bg-white hover:bg-amber-50 flex flex-col items-center text-center cursor-pointer transition-all">
+          <div class="w-16 h-16 rounded-full bg-white border-2 border-sky-300 flex items-center justify-center mb-2 shadow-inner p-1">
+            <svg viewBox="0 0 100 100" class="w-12 h-12" fill="none">
+              <path d="M 48 24 C 45 16 55 14 52 24" stroke="#94A3B8" stroke-width="2" fill="none" />
+              <polygon points="50,11 51,13 54,14 52,16 53,19 50,17 47,19 48,16 46,14 49,13" fill="#C084FC" />
+              <path d="M 34 35 C 28 29 23 38 28 44 C 22 56 20 74 24 88 C 27 94 40 96 50 96 C 60 96 73 94 76 88 C 80 74 78 56 72 44 C 77 38 72 29 66 35 C 60 31 40 31 34 35 Z" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.8" />
+              <ellipse cx="38" cy="68" rx="5" ry="3.5" fill="#F472B6" opacity="0.7" />
+              <ellipse cx="62" cy="68" rx="5" ry="3.5" fill="#F472B6" opacity="0.7" />
+              <rect x="43" y="56" width="4" height="9" rx="2" fill="#0F172A" />
+              <rect x="53" y="56" width="4" height="9" rx="2" fill="#0F172A" />
+              <circle cx="44.5" cy="58" r="1" fill="#FFFFFF" />
+              <circle cx="54.5" cy="58" r="1" fill="#FFFFFF" />
+            </svg>
+          </div>
+          <div class="text-sm font-black text-slate-900">도니</div>
+          <div class="text-[11px] font-bold text-slate-500">Doni</div>
+          <span class="mt-2 text-[10px] font-black px-2 py-0.5 rounded-full border bg-sky-100 text-sky-900 border-sky-300">쉼터수호</span>
+        </button>
+
+        <!-- 4. Babystar (Kkumbichi) Tab -->
+        <button onclick="switchCharacter('babystar')" id="tab-babystar" class="char-tab p-4 rounded-3xl border-2 border-amber-200 bg-white hover:bg-amber-50 flex flex-col items-center text-center cursor-pointer transition-all">
+          <div class="w-16 h-16 rounded-full bg-white border-2 border-yellow-300 flex items-center justify-center mb-2 shadow-inner p-1">
+            <svg viewBox="0 0 100 100" class="w-12 h-12" fill="none">
+              <line x1="50" y1="30" x2="50" y2="16" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" />
+              <circle cx="50" cy="13" r="3.5" fill="#F59E0B" />
+              <path d="M 50 28 L 59 41 L 75 43 L 64 53 L 67 68 L 50 60 L 33 68 L 36 53 L 25 43 L 41 41 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="1.8" stroke-linejoin="round" />
+              <ellipse cx="45" cy="51" rx="3.5" ry="2" fill="#FB7185" opacity="0.8" />
+              <ellipse cx="55" cy="51" rx="3.5" ry="2" fill="#FB7185" opacity="0.8" />
+              <rect x="43" y="43" width="3.5" height="7" rx="1.7" fill="#1E1B4B" />
+              <rect x="53" y="43" width="3.5" height="7" rx="1.7" fill="#1E1B4B" />
+            </svg>
+          </div>
+          <div class="text-sm font-black text-slate-900">꿈빛이</div>
+          <div class="text-[11px] font-bold text-slate-500">Kkumbichi</div>
+          <span class="mt-2 text-[10px] font-black px-2 py-0.5 rounded-full border bg-yellow-100 text-yellow-900 border-yellow-300">스탬프요정</span>
+        </button>
+      </div>
+
+      <!-- Character Card Detail -->
+      <div class="bg-white rounded-3xl p-6 md:p-8 border-2 border-amber-300 shadow-md">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- Big Mascot SVG Showcase Box -->
+          <div id="char-avatar-box" class="w-36 h-40 md:w-44 md:h-48 rounded-3xl bg-gradient-to-br from-[#FEF08A] to-[#FED7AA] border-2 border-amber-400 flex items-center justify-center p-3 shadow-inner shrink-0">
+            <!-- Rendered by JS or initial SVG -->
+            <svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+              <path d="M 70 42 Q 62 20 54 18" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" />
+              <polygon points="54,8 57,15 64,16 59,21 61,28 54,24 47,28 49,21 44,16 51,15" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2" />
+              <path d="M 46 95 C 30 89 24 72 30 64 C 36 58 44 66 42 74 C 40 82 46 89 50 95" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+              <path d="M 94 97 C 104 101 108 113 104 121 C 100 125 94 121 92 115 C 90 107 88 101 86 97" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+              <ellipse cx="55" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+              <ellipse cx="85" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+              <path d="M 50 104 C 46 122 52 142 70 142 C 88 142 94 122 90 104 Z" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+              <circle cx="35" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+              <circle cx="105" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+              <circle cx="70" cy="80" r="35" fill="#FDE047" stroke="#D97706" stroke-width="2.5" />
+              <ellipse cx="50" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+              <ellipse cx="90" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+              <rect x="59" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+              <rect x="74.5" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+              <circle cx="61.5" cy="73" r="1.6" fill="#FFFFFF" />
+              <circle cx="77" cy="73" r="1.6" fill="#FFFFFF" />
+              <path d="M 67 91 Q 70 95 73 91" stroke="#9A3412" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="flex-1 text-center md:text-left">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
+              <span id="char-role-badge" class="text-xs font-black px-3 py-1 rounded-full border bg-amber-200 text-amber-900 border-amber-300">
+                대전 골목 원정대 대장
+              </span>
+              <span class="text-xs text-slate-400 font-bold">Daejeon Character Explorer</span>
+            </div>
+
+            <h3 id="char-name-title" class="text-2xl md:text-3xl font-black text-slate-900 mb-2">
+              꿈돌이 <span class="text-base font-bold text-slate-400">(Kkumdori)</span>
+            </h3>
+
+            <p id="char-desc" class="text-slate-700 text-sm leading-relaxed mb-4 font-medium">
+              1시간 넘는 핫플 대기시간에 지친 여행객들을 번쩍 구출하는 대전의 대표 우주 요정! 도보 5분 거리의 숨은 LP 청음 다방과 고즈넉한 골목길로 안내합니다.
+            </p>
+
+            <blockquote id="char-quote" class="bg-[#FFFDF0] p-3 rounded-2xl border-l-4 border-amber-400 text-xs text-amber-900 font-bold italic mb-4">
+              "대전까지 오셔서 빵만 사고 가시기엔 아쉬운 보물들이 너무 많아요!"
+            </blockquote>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                <div class="text-slate-500 font-bold mb-0.5">📍 추천 골목 퀘스트</div>
+                <div id="char-spot" class="font-black text-slate-900">대흥동 레트로 LP 다방 & 독립서점 골목</div>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                <div class="text-slate-500 font-bold mb-0.5">⚡ 전담 특기</div>
+                <div id="char-skill" class="font-black text-slate-900">대기시간 순삭 레이더 & 길 찾기 탐색술</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROBLEM SECTION -->
+  <section id="문제-정의" class="py-20 bg-white border-b border-amber-200">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-black text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full mb-3 inline-block border border-amber-300">
+          대전 골목 상권의 현실
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          급증하는 여행객, 하지만 왜 소상공인은 외면받을까요?
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed font-medium">
+          유명 빵집 웨이팅 손님은 넘쳐나는데, 100m 옆 골목 가게는 조용한 이유!<br />
+          당일치기 관광객 쏠림 현상으로 발생하는 로컬 상권의 대표적인 Pain Point입니다.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-[#FFFDF5] p-8 rounded-3xl border-2 border-rose-200 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center font-black text-xl border border-rose-200">!</div>
+            <span class="text-xs font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200">외딴섬 관광 현상</span>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">특정 핫플/유명 업소 쏠림 심화</h3>
+          <p class="text-slate-600 leading-relaxed text-sm font-medium">
+            유명 빵집이나 특정 관광지 한두 곳만 방문하고 떠나버리는 짧은 체류 시간으로 인해 골목 상권으로의 소비 유입이 단절됩니다. 1시간 줄 서서 빵만 사고 대전역으로 곧장 복귀하는 악순환이 반복됩니다.
+          </p>
+          <div class="mt-6 pt-4 border-t border-rose-100 flex items-center justify-between text-xs text-slate-500 font-bold">
+            <span>대전 방문객 소비 통계</span>
+            <strong class="text-rose-600 font-black">핫플 1곳 방문 후 68% 당일 이탈</strong>
+          </div>
+        </div>
+
+        <div class="bg-[#FFFDF5] p-8 rounded-3xl border-2 border-amber-200 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center font-black text-xl border border-amber-300">?</div>
+            <span class="text-xs font-black text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">마케팅 자원 부재</span>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">소상공인의 마케팅 여력 부재</h3>
+          <p class="text-slate-600 leading-relaxed text-sm font-medium">
+            매력적인 상품이 있어도 MZ 단기 여행객의 취향에 맞는 비주얼 콘텐츠나 스토리텔링 마케팅을 전개할 자원이 부족합니다. 어디에 우리 매장을 소개해야 할지 막막한 실정입니다.
+          </p>
+          <div class="mt-6 pt-4 border-t border-amber-100 flex items-center justify-between text-xs text-slate-500 font-bold">
+            <span>골목 점포 마케팅 인력</span>
+            <strong class="text-amber-700 font-black">자체 기획 여력 부족</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before vs After -->
+      <div class="bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-200 rounded-3xl p-6 md:p-8 border-2 border-amber-400 shadow-md text-slate-900">
+        <h4 class="text-xl md:text-2xl font-black mb-2">여행객 동선 혁신: 무엇이 달라질까요?</h4>
+        <p class="text-xs sm:text-sm text-slate-800 font-medium mb-6">길바닥 스마트폰 대기에서 이색 로컬 골목 퀘스트로의 대전환!</p>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-white/90 p-5 rounded-2xl border-2 border-rose-200">
+            <div class="text-rose-600 text-xs font-black mb-2">❌ 기존 여행 패턴 (골목 상권 소비 단절)</div>
+            <p class="text-xs text-slate-700 leading-relaxed font-medium">
+              웨이팅 1시간 동안 길바닥 대기 ➔ 빵 구매 후 대전역 복귀 ➔ 골목 상점 소비액 0원
+            </p>
+          </div>
+          <div class="bg-white/95 p-5 rounded-2xl border-2 border-emerald-300">
+            <div class="text-emerald-700 text-xs font-black mb-2">✅ Local Curator 퀘스트 적용 후</div>
+            <p class="text-xs text-slate-700 leading-relaxed font-medium">
+              웨이팅 등록 후 꿈돌이 퀘스트 오픈 ➔ 도보 10분 골목 3곳 탐험 & 스탬프 ➔ 상점 평균 체류 42분 증가!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SOLUTION SECTION -->
+  <section id="솔루션-제시" class="py-20 bg-[#FEFCE8] border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-900 px-4 py-1 rounded-full text-xs font-black mb-3 border border-amber-300">
+          <span>꿈돌이의 3단계 로컬 활성화 솔루션</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          데이터 탐색과 AI 기획으로 완성하는 이색 동선
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed font-medium">
+          집요한 정보 분석(OSINT)과 AI 시각화로 골목 상점을 여행객의 퀘스트 스팟으로 재탄생시킵니다.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white p-8 rounded-3xl shadow-sm border-2 border-amber-200">
+          <span class="text-amber-800 font-black text-xs bg-amber-100 px-2.5 py-1 rounded-lg">STEP 01</span>
+          <h3 class="text-xl font-black text-slate-900 my-3">OSINT 숨은 자원 발굴</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium">
+            소셜 데이터 및 골목 상권 지도 데이터를 분석하여 핫플 인근 5~15분 거리의 매력적인 소상공인 점포를 정밀 발굴합니다.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-sm border-2 border-amber-200">
+          <span class="text-amber-800 font-black text-xs bg-amber-100 px-2.5 py-1 rounded-lg">STEP 02</span>
+          <h3 class="text-xl font-black text-slate-900 my-3">AI 퀘스트 MAP & 콘텐츠</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium">
+            생성형 AI 툴을 적극 활용하여 MZ세대 감성의 맞춤형 미션 코스와 비주얼 카드뉴스를 신속 제작합니다.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-sm border-2 border-amber-200">
+          <span class="text-amber-800 font-black text-xs bg-amber-100 px-2.5 py-1 rounded-lg">STEP 03</span>
+          <h3 class="text-xl font-black text-slate-900 my-3">현장 유진입 & 팝업 연계</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium">
+            스탬프 혜택 및 미니 포토존을 이식하여 단기 여행객의 체류 시간 연장과 실질적 매장 방문 결제를 유도합니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Quest Generator -->
+      <div class="bg-white rounded-3xl p-6 md:p-8 border-2 border-amber-300 shadow-sm">
+        <div class="text-center mb-8 bg-[#FFFDF0] p-6 rounded-2xl border border-amber-200">
+          <span class="text-xs font-black text-amber-900 bg-amber-200 px-3 py-1 rounded-full mb-2 inline-block">
+            ⭐ 꿈돌이의 퀘스트 연구소
+          </span>
+          <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
+            우리 매장도 퀘스트 핫스팟이 될 수 있을까요?
+          </h3>
+          <p class="text-slate-600 text-sm mt-1 font-medium">
+            업종과 지역을 선택하시면 10초 만에 맞춤형 퀘스트 카드를 생성해 드립니다!
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-4 bg-[#FFFBEB] p-6 rounded-2xl border-2 border-amber-200">
+            <div>
+              <label class="block text-xs font-black text-slate-800 mb-2">1. 매장 업종 선택</label>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="selectCategory('cafe')" id="cat-cafe" class="cat-btn py-2 px-3 text-xs font-bold rounded-xl border-2 bg-amber-400 text-slate-900 border-amber-500">☕ 감성 카페</button>
+                <button onclick="selectCategory('bookstore')" id="cat-bookstore" class="cat-btn py-2 px-3 text-xs font-bold rounded-xl border-2 bg-white text-slate-700 border-amber-200">📚 독립 서점</button>
+                <button onclick="selectCategory('craft')" id="cat-craft" class="cat-btn py-2 px-3 text-xs font-bold rounded-xl border-2 bg-white text-slate-700 border-amber-200">🎨 청년 공방</button>
+                <button onclick="selectCategory('food')" id="cat-food" class="cat-btn py-2 px-3 text-xs font-bold rounded-xl border-2 bg-white text-slate-700 border-amber-200">🍽️ 로컬 맛집</button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-black text-slate-800 mb-1">2. 매장명 (가칭)</label>
+              <input id="gen-store-name" type="text" value="카페 모퉁이" class="w-full text-xs p-2.5 bg-white border-2 border-amber-200 rounded-xl font-bold" />
+            </div>
+
+            <button onclick="generateCustomQuest()" class="w-full py-3 bg-amber-400 hover:bg-amber-500 text-slate-900 font-black text-xs rounded-xl border-2 border-amber-500 shadow-md cursor-pointer">
+              ✨ 맞춤 퀘스트 즉석 생성하기
+            </button>
+          </div>
+
+          <div class="lg:col-span-7 bg-[#FFFDF0] p-6 rounded-3xl border-2 border-amber-300">
+            <div class="flex items-center justify-between mb-3 border-b border-amber-200 pb-2">
+              <span class="bg-amber-400 text-slate-900 text-xs font-black px-2.5 py-0.5 rounded-md">기획 완성</span>
+              <span id="gen-walk-badge" class="text-xs font-bold text-amber-900">도보 5분 코스</span>
+            </div>
+            <h4 id="gen-quest-title" class="text-lg font-black text-slate-900 mb-2">
+              성심당 줄 서며 맛보는 시크릿 수제 바닐라빈 라떼 퀘스트
+            </h4>
+            <p id="gen-quest-target" class="text-xs text-slate-600 mb-4">
+              타깃: 웨이팅 1시간에 지친 2030 MZ 단기 여행객
+            </p>
+
+            <div class="space-y-2 mb-4 text-xs">
+              <div class="bg-white p-3 rounded-xl border border-amber-200">
+                <strong>1. 현장 미션:</strong> <span id="gen-step1">골목 빈티지 문패 앞에서 대기 번호표 인증샷 찍기</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-amber-200">
+                <strong>2. 체험 미션:</strong> <span id="gen-step2">바리스타 추천 시그니처 블렌드 시향 후 감상 남기기</span>
+              </div>
+              <div class="bg-amber-100 p-3 rounded-xl border border-amber-300 font-bold text-amber-950">
+                🎁 <strong>지급 혜택:</strong> <span id="gen-reward">음료 전 메뉴 1,000원 할인 & 꿈돌이 스티커 증정</span>
+              </div>
+            </div>
+
+            <button onclick="prefillAndOpenModal()" class="w-full py-3 bg-amber-400 hover:bg-amber-500 text-slate-900 font-black text-xs rounded-xl border-2 border-amber-500 shadow-sm cursor-pointer">
+              이 퀘스트로 무료 시범 신청하기 ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE QUEST MAP -->
+  <section id="시범-퀘스트-MAP" class="py-20 bg-[#FFFBEB] border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-black text-amber-900 bg-amber-200 px-3.5 py-1 rounded-full mb-3 inline-block border border-amber-300">
+          ⭐ 실제 시범 코스 인터랙티브 시연
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          대기시간 1시간, 꿈돌이와 걷는 별빛 골목 MAP
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed font-medium">
+          성심당 대기 등록 후 남는 자투리 시간을 이용해 도보 10분 내 숨겨진 로컬 파트너 상점을 방문하세요!
+        </p>
+
+        <!-- View mode switcher -->
+        <div class="mt-6 inline-flex p-1.5 bg-amber-200 rounded-2xl border border-amber-300">
+          <button onclick="switchViewMode('traveler')" id="btn-view-traveler" class="px-4 py-1.5 text-xs font-black rounded-xl bg-amber-400 text-slate-900 border border-amber-500">
+            🧭 여행객 시점 (퀘스트)
+          </button>
+          <button onclick="switchViewMode('merchant')" id="btn-view-merchant" class="px-4 py-1.5 text-xs font-black rounded-xl text-slate-700">
+            🏪 상점주 시점 (유입 효과)
+          </button>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Interactive Canvas -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-6 border-2 border-amber-300 shadow-sm">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-amber-100 text-xs font-bold text-slate-700">
+            <span>📍 대전 중구 대흥·은행동 골목 탐험</span>
+            <span id="stamp-counter" class="text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">⭐ 스탬프 1/3 수집</span>
+          </div>
+
+          <!-- Canvas graphic -->
+          <div class="relative w-full aspect-[4/3] bg-gradient-to-br from-[#FEF08A]/40 via-white to-[#BAE6FD]/40 rounded-2xl border-2 border-amber-200 p-4 select-none">
+            <svg class="absolute inset-0 w-full h-full stroke-amber-400" stroke-width="3" stroke-dasharray="6 6" fill="none">
+              <line x1="16%" y1="78%" x2="28%" y2="38%" />
+              <line x1="28%" y1="38%" x2="58%" y2="26%" />
+              <line x1="58%" y1="26%" x2="80%" y2="64%" />
+            </svg>
+
+            <!-- Hotspot Starting Pin -->
+            <div class="absolute -translate-x-1/2 -translate-y-1/2" style="left: 16%; top: 78%;">
+              <div class="flex flex-col items-center">
+                <div class="w-10 h-10 rounded-2xl bg-amber-400 text-white font-bold flex items-center justify-center border-2 border-amber-500 shadow animate-pulse">
+                  🥖
+                </div>
+                <span class="mt-1 bg-slate-900 text-amber-300 text-[10px] font-black px-1.5 py-0.5 rounded">성심당 [출발]</span>
+              </div>
+            </div>
+
+            <!-- Spot 1 Pin -->
+            <button onclick="selectSpot(1)" id="pin-1" class="spot-pin absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-transform hover:scale-110" style="left: 28%; top: 38%;">
+              <div class="flex flex-col items-center">
+                <div class="w-11 h-11 rounded-2xl bg-amber-400 text-slate-900 font-black flex items-center justify-center border-2 border-amber-600 shadow-md">
+                  01
+                </div>
+                <span class="mt-1 bg-amber-400 text-slate-900 text-[10px] font-black px-1.5 py-0.5 rounded shadow">LP다방</span>
+              </div>
+            </button>
+
+            <!-- Spot 2 Pin -->
+            <button onclick="selectSpot(2)" id="pin-2" class="spot-pin absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-transform hover:scale-110" style="left: 58%; top: 26%;">
+              <div class="flex flex-col items-center">
+                <div class="w-11 h-11 rounded-2xl bg-white text-slate-800 font-black flex items-center justify-center border-2 border-amber-400 shadow-md">
+                  02
+                </div>
+                <span class="mt-1 bg-white text-slate-800 text-[10px] font-black px-1.5 py-0.5 rounded shadow border border-slate-200">도예공방</span>
+              </div>
+            </button>
+
+            <!-- Spot 3 Pin -->
+            <button onclick="selectSpot(3)" id="pin-3" class="spot-pin absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-transform hover:scale-110" style="left: 80%; top: 64%;">
+              <div class="flex flex-col items-center">
+                <div class="w-11 h-11 rounded-2xl bg-white text-slate-800 font-black flex items-center justify-center border-2 border-amber-400 shadow-md">
+                  03
+                </div>
+                <span class="mt-1 bg-white text-slate-800 text-[10px] font-black px-1.5 py-0.5 rounded shadow border border-slate-200">참기름과자</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Spot Detail Card -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-6 border-2 border-amber-300 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span id="spot-category" class="font-black text-amber-900 bg-amber-200 px-2.5 py-0.5 rounded-lg">문화 & 카페</span>
+              <span id="spot-distance" class="font-bold text-amber-800">핫플에서 도보 4분 (280m)</span>
+            </div>
+
+            <h3 id="spot-title" class="text-xl font-black text-slate-900 mb-2">대흥동 레트로 LP 다방 & 서점</h3>
+            <p id="spot-desc" class="text-slate-600 text-sm mb-4 font-medium leading-relaxed">
+              1984년부터 이어진 고즈넉한 대흥동 골목 속 비밀 아지트. 턴테이블에서 울리는 LP 음악과 독립 출판물을 만날 수 있습니다.
+            </p>
+
+            <div id="view-traveler-content" class="space-y-3">
+              <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 text-xs">
+                <strong class="text-amber-950 block mb-1">Q. 꿈돌이의 골목 미션:</strong>
+                <span id="spot-mission" class="text-amber-900 font-bold">LP 턴테이블에서 추천 음반 1곡 청음 후 방명록에 여행 한 줄 기록하기</span>
+              </div>
+              <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4 text-xs">
+                <strong class="text-emerald-950 block mb-1">🎁 별빛 리워드 & 혜택:</strong>
+                <span id="spot-reward" class="text-emerald-900 font-bold">수제 드립백 커피 1포 & 꿈돌이 별빛 스탬프</span>
+              </div>
+            </div>
+
+            <div id="view-merchant-content" class="hidden space-y-2 text-xs bg-amber-100 p-4 rounded-2xl border-2 border-amber-200 text-amber-900 font-bold">
+              <div>✓ 주말 웨이팅 1시간 손님 월평균 320명+ 자연 방문</div>
+              <div>✓ 1인당 골목 체류시간: 15분 ➔ 42분 증가</div>
+              <div>✓ 스탬프 인증 고객 현장 구매 전환율: 약 43.8%</div>
+            </div>
+          </div>
+
+          <button onclick="toggleStamp()" id="stamp-btn" class="mt-6 w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm rounded-2xl border-2 border-emerald-600 shadow cursor-pointer transition-all">
+            ⭐ 별빛 스탬프 수집 완료! (클릭하여 토글)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. KEY BENEFITS -->
+  <section id="핵심-기능혜택" class="py-20 bg-white border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-black text-amber-900 bg-amber-200 px-3.5 py-1 rounded-full mb-3 inline-block">
+          3대 핵심 혜택
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          파트너 상점 및 지자체가 얻는 3가지 핵심 혜택
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed font-medium">
+          비인기 골목 상점이 대전 여행객들의 필수 방문 퀘스트 스팟으로 변신합니다.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#FFFDF5] rounded-3xl p-8 border-2 border-amber-300 shadow-sm">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-xl font-black text-slate-900 mb-2">실질적 매출 증대</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium mb-4">
+            핫플 피크 대기시간에 맞춰 골목 점포로 소비를 분산시키고 현장 결제로 연결합니다.
+          </p>
+          <div class="text-xs font-bold text-amber-800">✓ 주말 유휴 테이블 85% 가동률 달성</div>
+        </div>
+
+        <div class="bg-[#FFFDF5] rounded-3xl p-8 border-2 border-amber-300 shadow-sm">
+          <div class="text-4xl mb-4">✨</div>
+          <h3 class="text-xl font-black text-slate-900 mb-2">트렌디 브랜딩 획득</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium mb-4">
+            AI 기반 비주얼 퀘스트 맵 제작으로 별도 마케팅 비용 없이 젊은 층에 브랜딩됩니다.
+          </p>
+          <div class="text-xs font-bold text-sky-800">✓ 인스타 스토리 및 블로그 바이럴 효과</div>
+        </div>
+
+        <div class="bg-[#FFFDF5] rounded-3xl p-8 border-2 border-amber-300 shadow-sm">
+          <div class="text-4xl mb-4">🗺️</div>
+          <h3 class="text-xl font-black text-slate-900 mb-2">상권 데이터 확보</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium mb-4">
+            여행객 이동 동선과 스탬프 참여 데이터를 분석해 지속 가능한 활성화 기획에 활용합니다.
+          </p>
+          <div class="text-xs font-bold text-emerald-800">✓ 체류시간 및 고객 전환 리포트 제공</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TRUST & EVIDENCE -->
+  <section id="신뢰-구축" class="py-20 bg-[#FEFCE8] border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-8 md:p-12 rounded-3xl shadow-xl mb-14 border-2 border-amber-400">
+        <h2 class="text-2xl md:text-3xl font-black mb-3">MVP 검증 및 대전 지역 거점 협력 네트워크</h2>
+        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+          유명 핫플 인근 골목 상점 3곳 대상 퀘스트 MAP 시범 검증 진행 중!<br />
+          대전 청년창업지원단 연계 및 AI 창업 경진대회 성과로 검증된 기획력입니다.
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs font-bold">
+          <span class="bg-amber-400/20 text-amber-200 px-3 py-1.5 rounded-xl border border-amber-400/40">🏛️ 대전 청년창업지원단 연계</span>
+          <span class="bg-amber-400/20 text-amber-200 px-3 py-1.5 rounded-xl border border-amber-400/40">🏙️ 대전관광공사 / 도시재생지원센터</span>
+          <span class="bg-amber-400/20 text-amber-200 px-3 py-1.5 rounded-xl border border-amber-400/40">디렉터 서은지 직속 기획</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
+          <span class="text-xs font-black text-amber-800 bg-amber-100 px-2 py-0.5 rounded">문화 & 카페</span>
+          <h4 class="text-base font-black my-2">대흥동 레트로 LP 다방</h4>
+          <p class="text-xs text-slate-600 italic bg-[#FFFDF0] p-3 rounded-xl mb-3">"성심당 번호표 뽑고 오신 분들이 퀘스트 보고 방문하셔서 음악 듣고 드립백까지 사 가세요."</p>
+          <div class="text-xl font-black text-amber-600">+242% 방문객 증가</div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
+          <span class="text-xs font-black text-amber-800 bg-amber-100 px-2 py-0.5 rounded">공예 & 소품</span>
+          <h4 class="text-base font-black my-2">은행동 모퉁이 도예 공방</h4>
+          <p class="text-xs text-slate-600 italic bg-[#FFFDF0] p-3 rounded-xl mb-3">"홍보할 엄두가 안 났는데 귀여운 퀘스트 지도 덕분에 20대 여행객들이 자연스레 들어옵니다."</p>
+          <div class="text-xl font-black text-amber-600">+153% 체류시간 증가</div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-sm">
+          <span class="text-xs font-black text-amber-800 bg-amber-100 px-2 py-0.5 rounded">로컬 F&B</span>
+          <h4 class="text-base font-black my-2">선화단길 참기름 파티세리</h4>
+          <p class="text-xs text-slate-600 italic bg-[#FFFDF0] p-3 rounded-xl mb-3">"대기표 지참 할인 미션으로 연결하니 빵 봉지 든 손님들이 선물용 구움과자 박스를 구매하셨어요."</p>
+          <div class="text-xl font-black text-amber-600">+42만원 추가 매출</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PRICING & OFFER -->
+  <section id="가격-및-조건" class="py-20 bg-white border-b border-amber-200">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-xs font-black text-amber-900 bg-amber-200 px-3.5 py-1 rounded-full mb-3 inline-block">
+        ⭐ 선착순 파일럿 특별 혜택
+      </span>
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+        초기 시범 파트너 상점 한정 무료 프로모션
+      </h2>
+      <p class="text-slate-600 text-base mb-10 font-medium">
+        지금 참여하는 소상공인 점포 3곳에는 퀘스트 MAP 및 숏폼 제작을 무료로 제공합니다.
+      </p>
+
+      <div class="bg-[#FFFDF5] p-8 md:p-10 rounded-3xl shadow-xl border-2 border-amber-400 max-w-lg mx-auto">
+        <span class="bg-amber-300 text-slate-900 text-xs font-black px-4 py-1.5 rounded-full mb-4 inline-block border border-amber-500">
+          ⭐ BETA TESTER OFFER · 3곳 한정
+        </span>
+        <div class="text-5xl font-black text-slate-900 mb-2">
+          0원 <span class="text-lg text-slate-400 line-through font-normal">₩300,000</span>
+        </div>
+        <p class="text-slate-700 text-sm font-bold mb-6">카드뉴스 퀘스트 MAP 제작 + SNS 홍보 시범 지원 전액 무료</p>
+
+        <div class="mb-6 bg-amber-100 border-2 border-amber-300 rounded-2xl p-3 flex justify-between text-xs text-amber-950 font-bold">
+          <span>선착순 모집 현황</span>
+          <span>2곳 확정 / <strong class="text-rose-600 font-black">잔여 1자리!</strong></span>
+        </div>
+
+        <ul class="text-left text-sm text-slate-700 space-y-3 mb-8 border-t border-amber-200 pt-6 font-medium">
+          <li>✓ <strong>OSINT 기반</strong> 점포 숨은 매력 포인트 및 스토리텔링 발굴</li>
+          <li>✓ <strong>AI 기반 디자인</strong> 맞춤형 모바일 퀘스트 MAP 제작</li>
+          <li>✓ <strong>단기 여행객 전용</strong> 스탬프 리워드 및 할인 템플릿 설계</li>
+        </ul>
+
+        <button onclick="openApplyModal()" class="w-full bg-amber-400 hover:bg-amber-500 text-slate-900 py-4 rounded-2xl font-black text-base border-2 border-amber-500 shadow-lg cursor-pointer">
+          ⭐ 선착순 무료 신청하기
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CLOSING & CTA -->
+  <section id="클로징-및-cta" class="py-24 bg-[#FEFCE8]">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-xs font-black text-amber-900 bg-amber-200 px-4 py-1.5 rounded-full mb-4 inline-block">
+        꿈돌이와 함께하는 대전 로컬 상권 혁신
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+        우리 매장도 퀘스트 핫스팟이 될 수 있습니다
+      </h2>
+      <p class="text-slate-700 text-base md:text-lg mb-10 font-semibold">
+        대전 여행객의 동선을 바꿔 골목 상권에 새로운 매출 활력을 불어넣으세요!
+      </p>
+
+      <div class="bg-white border-2 border-amber-300 rounded-3xl p-8 shadow-lg max-w-2xl mx-auto">
+        <p class="font-black text-slate-800 text-base mb-6">시범 사업 파트너 신청 및 프로젝트 문의</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button onclick="openApplyModal()" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-500 text-slate-900 font-black px-8 py-4 rounded-2xl text-base border-2 border-amber-500 shadow cursor-pointer">
+            무료 퀘스트 MAP 간편 신청하기
+          </button>
+          <a href="https://open.kakao.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FEE500] hover:bg-[#FDD835] text-[#3c1e1e] font-black px-7 py-4 rounded-2xl text-base border border-[#F0D000]">
+            💬 카카오톡 오픈채팅 문의
+          </a>
+        </div>
+        <p class="text-xs text-slate-400 mt-4">* 시범 서비스 3곳 선착순 마감 시 종료됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-black text-lg text-white mb-1">꿈돌이의 골목탐험 · Local Curator</div>
+        <p class="text-xs text-slate-400">우주 요정 꿈돌이와 함께하는 대전 로컬 상점 퀘스트 큐레이션</p>
+      </div>
+      <div class="text-xs text-slate-500 text-center md:text-right">
+        <p>© 2026 Local Curator. 창직자 서은지 All rights reserved.</p>
+        <p class="text-[11px] text-slate-600 mt-1">대전 로컬 상권 활성화 및 당일치기 여행 동선 혁신 프로젝트</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- APPLICATION MODAL -->
+  <div id="apply-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+    <div class="relative w-full max-w-lg bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-2 border-amber-300 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeApplyModal()" class="absolute top-5 right-5 p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-amber-100">✕</button>
+
+      <!-- Form View -->
+      <div id="modal-form-view">
+        <div class="mb-6">
+          <span class="text-xs font-black text-amber-900 bg-amber-200 px-3 py-1 rounded-full border border-amber-300 mb-2 inline-block">
+            초기 파트너 3곳 한정 (0원 무료)
+          </span>
+          <h3 class="text-2xl font-black text-slate-900 tracking-tight">꿈돌이 시범 퀘스트 MAP 신청</h3>
+          <p class="text-slate-500 text-xs mt-1">간단한 정보를 남겨주시면, 점포 맞춤형 퀘스트 기획안을 무료로 제작해 드립니다.</p>
+        </div>
+
+        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-black text-slate-800 mb-1">매장명 <span class="text-red-500">*</span></label>
+            <input id="input-store-name" type="text" required placeholder="예: 카페 모퉁이" class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-black text-slate-800 mb-1">대표자 성함</label>
+              <input id="input-owner-name" type="text" placeholder="홍길동" class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold" />
+            </div>
+            <div>
+              <label class="block text-xs font-black text-slate-800 mb-1">매장 업종</label>
+              <select id="input-category" class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold bg-white">
+                <option value="카페/디저트">카페 / 디저트</option>
+                <option value="독립서점/소품">독립서점 / 소품숍</option>
+                <option value="공방/클래스">공방 / 클래스</option>
+                <option value="로컬식당/펍">로컬 맛집 / 펍</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-black text-slate-800 mb-1">연락처 <span class="text-red-500">*</span></label>
+            <input id="input-phone" type="tel" required placeholder="010-1234-5678" class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-black text-slate-800 mb-1">매장 위치 및 인근 핫플</label>
+            <input id="input-location" type="text" placeholder="예: 대전 중구 대흥동, 성심당 도보 7분" class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-black text-slate-800 mb-1">남기실 말씀 (선택)</label>
+            <textarea id="input-notes" rows="2" placeholder="예: 핫플 대기 손님들을 우리 골목으로 모셔오고 싶어요." class="w-full text-xs p-3 border-2 border-amber-200 rounded-xl font-bold resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 bg-amber-400 hover:bg-amber-500 text-slate-900 font-black text-sm rounded-2xl border-2 border-amber-500 shadow cursor-pointer">
+            ⭐ 선착순 무료 혜택으로 신청하기
+          </button>
+        </form>
+      </div>
+
+      <!-- Success View -->
+      <div id="modal-success-view" class="hidden text-center py-6">
+        <div class="text-5xl mb-3">🎉</div>
+        <span class="text-xs font-black text-amber-900 bg-amber-200 px-3.5 py-1 rounded-full mb-2 inline-block">신청 접수 완료!</span>
+        <h3 class="text-2xl font-black text-slate-900 mb-2">무료 시범 퀘스트 접수가 완료되었습니다!</h3>
+        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+          <strong id="success-store-name"></strong> 점주님, 신청 감사합니다.<br />
+          서은지 디렉터가 24시간 이내에 기재해주신 연락처로 개별 안내드립니다!
+        </p>
+        <button onclick="closeApplyModal()" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-2xl">
+          닫기
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE VANILLA JS SCRIPT -->
+  <script>
+    // Modal Logic
+    function openApplyModal() {
+      document.getElementById('apply-modal').classList.remove('hidden');
+      document.getElementById('apply-modal').classList.add('flex');
+    }
+
+    function closeApplyModal() {
+      document.getElementById('apply-modal').classList.add('hidden');
+      document.getElementById('apply-modal').classList.remove('flex');
+      document.getElementById('modal-form-view').classList.remove('hidden');
+      document.getElementById('modal-success-view').classList.add('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const storeName = document.getElementById('input-store-name').value;
+      document.getElementById('success-store-name').innerText = storeName;
+      document.getElementById('modal-form-view').classList.add('hidden');
+      document.getElementById('modal-success-view').classList.remove('hidden');
+    }
+
+    // Character Switching
+    const characters = {
+      kkumdori: {
+        name: '꿈돌이 (Kkumdori)',
+        role: '대전 골목 원정대 대장',
+        desc: '1시간 넘는 핫플 대기시간에 지친 여행객들을 번쩍 구출하는 대전의 대표 우주 요정! 도보 5분 거리의 숨은 LP 청음 다방과 고즈넉한 골목길로 안내합니다.',
+        quote: '"대전까지 오셔서 빵만 사고 가시기엔 아쉬운 보물들이 너무 많아요!"',
+        spot: '대흥동 레트로 LP 다방 & 독립서점 골목',
+        skill: '대기시간 순삭 레이더 & 길 찾기 탐색술',
+        emoji: '🌟'
+      },
+      kkumsuni: {
+        name: '꿈순이 (Kkumsuni)',
+        role: '감성 큐레이션 디렉터',
+        desc: '머리에 사랑스러운 파란 리본을 단 낭만 큐레이터! 2030 MZ 여행객의 감성을 100% 저격하는 아기자기한 도자기 공방과 인스타 감성 카페 코스를 전담합니다.',
+        quote: '"골목 안쪽에 사진이 정말 예쁘게 나오는 비밀 공간이 있어요!"',
+        spot: '은행동 모퉁이 도자기 공방 & 빈티지 소품숍',
+        skill: '취향 저격 포토존 발굴 & 감성 카드뉴스 기획',
+        emoji: '🎀'
+      },
+      bigblue: {
+        name: '도니 (Doni)',
+        role: '골목 쉼터 든든한 수호자',
+        desc: '포근하고 거대한 체구로 여행객에게 여유와 쉼을 선물하는 든든한 친구. 40년 전통 노포와 손맛 좋은 로컬 베이커리의 따뜻한 인심을 지킵니다.',
+        quote: '"급하게 서두르지 마세요. 골목에서 잠시 쉬어가는 시간도 여행이에요."',
+        spot: '선화단길 40년 전통 수제 참기름 파티세리',
+        skill: '장시간 편안한 체류 공간 안내 & 로컬 찐맛집 검증',
+        emoji: '🦖'
+      },
+      babystar: {
+        name: '꿈빛이 (Kkumbichi)',
+        role: '별빛 스탬프 요정',
+        desc: '빛의 속도로 골목을 뽈뽈 날아다니는 귀염둥이 막내들! 매장에 도착해 미션을 완료한 여행객들에게 반짝이는 10% 현장 할인 스탬프를 쾅 찍어줍니다.',
+        quote: '"미션 완료! 반짝반짝 별빛 스탬프를 선물로 드릴게요! ⭐"',
+        spot: '골목 곳곳의 비밀 미션 스탬프 부스',
+        skill: '실시간 리워드 지급 & 방문객 스탬프 집계',
+        emoji: '⭐'
+      }
+    };
+
+    // Character Full Vector SVGs (Standardized 140x160 viewBox & matched proportions)
+    const charSVGs = {
+      kkumdori: `<svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+        <path d="M 70 42 Q 62 20 54 18" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" />
+        <polygon points="54,8 57,15 64,16 59,21 61,28 54,24 47,28 49,21 44,16 51,15" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2" />
+        <path d="M 46 95 C 30 89 24 72 30 64 C 36 58 44 66 42 74 C 40 82 46 89 50 95" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+        <path d="M 94 97 C 104 101 108 113 104 121 C 100 125 94 121 92 115 C 90 107 88 101 86 97" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+        <ellipse cx="55" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+        <ellipse cx="85" cy="145" rx="10" ry="5.5" fill="#F59E0B" stroke="#D97706" stroke-width="1.8" />
+        <path d="M 50 104 C 46 122 52 142 70 142 C 88 142 94 122 90 104 Z" fill="#FDE047" stroke="#D97706" stroke-width="2.2" />
+        <circle cx="35" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+        <circle cx="105" cy="80" r="6.5" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+        <circle cx="70" cy="80" r="35" fill="#FDE047" stroke="#D97706" stroke-width="2.5" />
+        <ellipse cx="50" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+        <ellipse cx="90" cy="88" rx="7" ry="4.5" fill="#FB7185" opacity="0.8" />
+        <rect x="59" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+        <rect x="74.5" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+        <circle cx="61.5" cy="73" r="1.6" fill="#FFFFFF" />
+        <circle cx="77" cy="73" r="1.6" fill="#FFFFFF" />
+        <path d="M 67 91 Q 70 95 73 91" stroke="#9A3412" stroke-width="2" stroke-linecap="round" />
+      </svg>`,
+      kkumsuni: `<svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+        <path d="M 70 42 Q 65 22 58 18" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" />
+        <polygon points="58,8 61,15 68,16 63,21 65,28 58,24 51,28 53,21 48,16 55,15" fill="#FACC15" stroke="#CA8A04" stroke-width="1.2" />
+        <g transform="translate(36, 47)">
+          <ellipse cx="5.5" cy="5.5" rx="6.5" ry="5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1.2" />
+          <ellipse cx="16.5" cy="5.5" rx="6.5" ry="5" fill="#93C5FD" stroke="#3B82F6" stroke-width="1.2" />
+          <circle cx="11" cy="5.5" r="3" fill="#60A5FA" />
+        </g>
+        <path d="M 46 95 C 30 89 24 72 30 64 C 36 58 44 66 42 74 C 40 82 46 89 50 95" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+        <path d="M 94 97 C 104 101 108 113 104 121 C 100 125 94 121 92 115 C 90 107 88 101 86 97" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+        <ellipse cx="55" cy="145" rx="10" ry="5.5" fill="#F43F5E" stroke="#BE123C" stroke-width="1.8" />
+        <ellipse cx="85" cy="145" rx="10" ry="5.5" fill="#F43F5E" stroke="#BE123C" stroke-width="1.8" />
+        <path d="M 50 104 C 46 122 52 142 70 142 C 88 142 94 122 90 104 Z" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.2" />
+        <circle cx="35" cy="80" r="6.5" fill="#F472B6" stroke="#DB2777" stroke-width="2" />
+        <circle cx="105" cy="80" r="6.5" fill="#F472B6" stroke="#DB2777" stroke-width="2" />
+        <circle cx="70" cy="80" r="35" fill="#F9A8D4" stroke="#DB2777" stroke-width="2.5" />
+        <ellipse cx="50" cy="88" rx="7" ry="4.5" fill="#F43F5E" opacity="0.8" />
+        <ellipse cx="90" cy="88" rx="7" ry="4.5" fill="#F43F5E" opacity="0.8" />
+        <rect x="59" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+        <rect x="74.5" y="70" width="6.5" height="14" rx="3.25" fill="#1E1B4B" />
+        <circle cx="61.5" cy="73" r="1.6" fill="#FFFFFF" />
+        <circle cx="77" cy="73" r="1.6" fill="#FFFFFF" />
+        <path d="M 67 91 Q 70 95 73 91" stroke="#9F1239" stroke-width="2" stroke-linecap="round" />
+      </svg>`,
+      bigblue: `<svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+        <path d="M 70 34 C 66 18 78 16 74 34" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" fill="none" />
+        <polygon points="74,10 76,15 81,16 77,20 78,25 74,22 70,25 71,20 67,16 72,15" fill="#C084FC" stroke="#7E22CE" stroke-width="1" />
+        <path d="M 44 48 C 36 38 28 50 36 60 C 26 78 22 108 28 135 C 32 146 52 148 70 148 C 88 148 108 146 112 135 C 118 108 114 78 104 60 C 112 50 104 38 96 48 C 86 42 54 42 44 48 Z" fill="#BAE6FD" stroke="#0284C7" stroke-width="2.5" />
+        <ellipse cx="48" cy="145" rx="12" ry="7" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" />
+        <ellipse cx="92" cy="145" rx="12" ry="7" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" />
+        <ellipse cx="46" cy="90" rx="8" ry="5" fill="#F472B6" opacity="0.75" />
+        <ellipse cx="94" cy="90" rx="8" ry="5" fill="#F472B6" opacity="0.75" />
+        <rect x="59" y="72" width="6.5" height="14" rx="3.25" fill="#0F172A" />
+        <rect x="74.5" y="72" width="6.5" height="14" rx="3.25" fill="#0F172A" />
+        <circle cx="61" cy="75" r="1.6" fill="#FFFFFF" />
+        <circle cx="76.5" cy="75" r="1.6" fill="#FFFFFF" />
+        <path d="M 66 93 Q 70 97 74 93" stroke="#075985" stroke-width="2.2" stroke-linecap="round" />
+      </svg>`,
+      babystar: `<svg viewBox="0 0 140 160" class="w-full h-full drop-shadow-md overflow-visible" fill="none">
+        <line x1="70" y1="46" x2="70" y2="24" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" />
+        <circle cx="70" cy="18" r="5" fill="#F59E0B" />
+        <path d="M 70 45 L 82 72 L 110 74 L 88 94 L 95 122 L 70 107 L 45 122 L 52 94 L 30 74 L 58 72 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2.5" stroke-linejoin="round" />
+        <ellipse cx="58" cy="138" rx="7" ry="4" fill="#F59E0B" stroke="#CA8A04" stroke-width="1.5" />
+        <ellipse cx="82" cy="138" rx="7" ry="4" fill="#F59E0B" stroke="#CA8A04" stroke-width="1.5" />
+        <ellipse cx="52" cy="90" rx="6" ry="3.5" fill="#FB7185" opacity="0.8" />
+        <ellipse cx="88" cy="90" rx="6" ry="3.5" fill="#FB7185" opacity="0.8" />
+        <rect x="61" y="78" width="6" height="13" rx="3" fill="#1E1B4B" />
+        <rect x="73" y="78" width="6" height="13" rx="3" fill="#1E1B4B" />
+        <circle cx="63" cy="81" r="1.5" fill="#FFFFFF" />
+        <circle cx="75" cy="81" r="1.5" fill="#FFFFFF" />
+        <path d="M 67 95 Q 70 98 73 95" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round" />
+      </svg>`
+    };
+
+    const charGradients = {
+      kkumdori: 'bg-gradient-to-br from-[#FEF08A] to-[#FED7AA] border-amber-400',
+      kkumsuni: 'bg-gradient-to-br from-[#FCE7F3] to-[#FBCFE8] border-pink-400',
+      bigblue: 'bg-gradient-to-br from-[#E0F2FE] to-[#BAE6FD] border-sky-400',
+      babystar: 'bg-gradient-to-br from-[#FEF9C3] to-[#FEF08A] border-amber-400'
+    };
+
+    function switchCharacter(id) {
+      document.querySelectorAll('.char-tab').forEach(el => {
+        el.classList.remove('bg-amber-100', 'border-amber-500', 'shadow-md');
+        el.classList.add('bg-white', 'border-amber-200');
+      });
+      document.getElementById('tab-' + id).classList.add('bg-amber-100', 'border-amber-500', 'shadow-md');
+      document.getElementById('tab-' + id).classList.remove('bg-white', 'border-amber-200');
+
+      const c = characters[id];
+      document.getElementById('char-name-title').innerText = c.name;
+      document.getElementById('char-role-badge').innerText = c.role;
+      document.getElementById('char-desc').innerText = c.desc;
+      document.getElementById('char-quote').innerText = c.quote;
+      document.getElementById('char-spot').innerText = c.spot;
+      document.getElementById('char-skill').innerText = c.skill;
+
+      const avatarBox = document.getElementById('char-avatar-box');
+      avatarBox.innerHTML = charSVGs[id] || '';
+      avatarBox.className = `w-36 h-40 md:w-44 md:h-48 rounded-3xl border-2 flex items-center justify-center p-3 shadow-inner shrink-0 ${charGradients[id] || 'bg-amber-100'}`;
+    }
+
+    // Quest Generator Logic
+    const questTemplates = {
+      cafe: {
+        title: '성심당 줄 서며 맛보는 시크릿 수제 바닐라빈 라떼 퀘스트',
+        target: '타깃: 웨이팅 1시간에 지친 2030 MZ 단기 여행객',
+        step1: '골목 빈티지 문패 앞에서 대기 번호표 인증샷 찍기',
+        step2: '바리스타 추천 시그니처 블렌드 시향 후 감상 남기기',
+        reward: '음료 전 메뉴 1,000원 할인 & 꿈돌이 스티커 증정',
+        walk: '도보 5분 코스'
+      },
+      bookstore: {
+        title: '책장 사이 숨겨진 로컬 작가의 비밀 문장 수집하기',
+        target: '타깃: 혼행족 및 조용한 골목의 매력을 느끼고 싶은 힐링 여행자',
+        step1: '이달의 로컬 추천 서가에서 마음에 드는 단어 1개 찾기',
+        step2: '서점 스탬프 테이블에서 전용 크라프트 책갈피에 도장 찍기',
+        reward: '도서 구매 시 로컬 드립백 1포 증정 & 감성 엽서',
+        walk: '도보 6분 코스'
+      },
+      craft: {
+        title: '손끝으로 만나는 흙내음, 15분 미니 도예 오브제 찾기',
+        target: '타깃: 데이트 코스 및 이색 기념품을 찾는 커플/친구 여행객',
+        step1: '공방 쇼룸에 숨은 도자기 마스코트와 인증샷 찍기',
+        step2: '나만의 취향 도자기 찻잔을 골라 인스타 스토리에 태그하기',
+        reward: '핸드메이드 오브제 10% 현장 즉시 할인 & 미니 북마크',
+        walk: '도보 8분 코스'
+      },
+      food: {
+        title: '40년 노포와 청년 셰프의 만남, 골목 숨은 핑거푸드 투어',
+        target: '타깃: 가벼운 간식과 이색 로컬 맛을 경험하고 싶은 먹거리 탐험가',
+        step1: '매장 앞 퀘스트 QR코드를 스캔하여 비밀 메뉴 해금하기',
+        step2: '한입 테이스팅 후 간단한 리뷰 이모지 남기기',
+        reward: '세트 메뉴 주문 시 시그니처 사이드 디시 무료 업그레이드',
+        walk: '도보 4분 코스'
+      }
+    };
+
+    let currentCategory = 'cafe';
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-400', 'text-slate-900', 'border-amber-500');
+        btn.classList.add('bg-white', 'text-slate-700', 'border-amber-200');
+      });
+      document.getElementById('cat-' + cat).classList.add('bg-amber-400', 'text-slate-900', 'border-amber-500');
+      document.getElementById('cat-' + cat).classList.remove('bg-white', 'text-slate-700', 'border-amber-200');
+      generateCustomQuest();
+    }
+
+    function generateCustomQuest() {
+      const q = questTemplates[currentCategory];
+      const storeName = document.getElementById('gen-store-name').value || '우리 매장';
+      document.getElementById('gen-quest-title').innerText = `"${storeName}" : ${q.title}`;
+      document.getElementById('gen-quest-target').innerText = q.target;
+      document.getElementById('gen-step1').innerText = q.step1;
+      document.getElementById('gen-step2').innerText = q.step2;
+      document.getElementById('gen-reward').innerText = q.reward;
+      document.getElementById('gen-walk-badge').innerText = q.walk;
+    }
+
+    function prefillAndOpenModal() {
+      const storeName = document.getElementById('gen-store-name').value;
+      document.getElementById('input-store-name').value = storeName;
+      document.getElementById('input-notes').value = `[AI 퀘스트 연계 신청] ${document.getElementById('gen-quest-title').innerText}`;
+      openApplyModal();
+    }
+
+    // Map & Spots Logic
+    const spots = {
+      1: {
+        title: '대흥동 레트로 LP 다방 & 서점',
+        category: '문화 & 카페',
+        distance: '핫플에서 도보 4분 (280m)',
+        desc: '1984년부터 이어진 고즈넉한 대흥동 골목 속 비밀 아지트. 턴테이블에서 울리는 LP 음악과 독립 출판물을 만날 수 있습니다.',
+        mission: 'LP 턴테이블에서 추천 음반 1곡 청음 후 방명록에 여행 한 줄 기록하기',
+        reward: '수제 드립백 커피 1포 & 꿈돌이 별빛 스탬프'
+      },
+      2: {
+        title: '은행동 모퉁이 도자기 & 유리 공방',
+        category: '공예 & 소품',
+        distance: '핫플에서 도보 7분 (490m)',
+        desc: '대전 청년 도예 작가들이 운영하는 따뜻한 흙냄새 공방. 소소한 일상 오브제와 직접 빚은 도자기를 만납니다.',
+        mission: '공방 진열대 속 숨은 마스코트 아기 도자기 고양이를 찾아 사진 인증하기',
+        reward: '전 품목 10% 현장 즉시 할인 + 미니 도자기 북마크'
+      },
+      3: {
+        title: '선화단길 수제 참기름 파티세리',
+        category: '로컬 F&B',
+        distance: '핫플에서 도보 9분 (630m)',
+        desc: '40년 방앗간의 진짜 참기름을 프렌치 구움과자에 접목한 이색 디저트 명소. 대전의 새로운 로컬 맛을 소개합니다.',
+        mission: '시그니처 "황금 참기름 피낭시에" 시식 퀘스트 완료하기',
+        reward: '구움과자 박스 1,000원 할인 & 미니 참기름 샘플러'
+      }
+    };
+
+    let currentSpot = 1;
+    let collectedStamps = [1];
+
+    function selectSpot(idx) {
+      currentSpot = idx;
+      document.querySelectorAll('.spot-pin').forEach((pin, i) => {
+        const pinInner = pin.querySelector('div > div');
+        if (i + 1 === idx) {
+          pinInner.classList.add('bg-amber-400', 'text-slate-900', 'border-amber-600');
+          pinInner.classList.remove('bg-white', 'text-slate-800');
+        } else {
+          pinInner.classList.remove('bg-amber-400', 'text-slate-900', 'border-amber-600');
+          pinInner.classList.add('bg-white', 'text-slate-800');
+        }
+      });
+
+      const s = spots[idx];
+      document.getElementById('spot-title').innerText = s.title;
+      document.getElementById('spot-category').innerText = s.category;
+      document.getElementById('spot-distance').innerText = s.distance;
+      document.getElementById('spot-desc').innerText = s.desc;
+      document.getElementById('spot-mission').innerText = s.mission;
+      document.getElementById('spot-reward').innerText = s.reward;
+      updateStampButton();
+    }
+
+    function toggleStamp() {
+      if (collectedStamps.includes(currentSpot)) {
+        collectedStamps = collectedStamps.filter(id => id !== currentSpot);
+      } else {
+        collectedStamps.push(currentSpot);
+      }
+      updateStampButton();
+    }
+
+    function updateStampButton() {
+      const isCollected = collectedStamps.includes(currentSpot);
+      const btn = document.getElementById('stamp-btn');
+      if (isCollected) {
+        btn.innerText = '⭐ 별빛 스탬프 수집 완료! (클릭하여 취소)';
+        btn.className = 'mt-6 w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm rounded-2xl border-2 border-emerald-600 shadow cursor-pointer transition-all';
+      } else {
+        btn.innerText = '이 상점 퀘스트 도전 & 별빛 스탬프 찍기 ⭐';
+        btn.className = 'mt-6 w-full py-3.5 bg-amber-400 hover:bg-amber-500 text-slate-900 font-black text-sm rounded-2xl border-2 border-amber-500 shadow cursor-pointer transition-all';
+      }
+      document.getElementById('stamp-counter').innerText = `⭐ 스탬프 ${collectedStamps.length}/3 수집`;
+    }
+
+    function switchViewMode(mode) {
+      if (mode === 'traveler') {
+        document.getElementById('view-traveler-content').classList.remove('hidden');
+        document.getElementById('view-merchant-content').classList.add('hidden');
+        document.getElementById('btn-view-traveler').className = 'px-4 py-1.5 text-xs font-black rounded-xl bg-amber-400 text-slate-900 border border-amber-500';
+        document.getElementById('btn-view-merchant').className = 'px-4 py-1.5 text-xs font-black rounded-xl text-slate-700';
+      } else {
+        document.getElementById('view-traveler-content').classList.add('hidden');
+        document.getElementById('view-merchant-content').classList.remove('hidden');
+        document.getElementById('btn-view-traveler').className = 'px-4 py-1.5 text-xs font-black rounded-xl text-slate-700';
+        document.getElementById('btn-view-merchant').className = 'px-4 py-1.5 text-xs font-black rounded-xl bg-slate-900 text-amber-300 border border-slate-800';
+      }
+    }
+  </script>
+</body>
+</html>
